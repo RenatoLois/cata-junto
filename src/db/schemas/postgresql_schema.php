@@ -18,7 +18,8 @@ CREATE TABLE IF NOT EXISTS pessoa (
     senha_hash VARCHAR(255) NOT NULL,
     ativo BOOLEAN DEFAULT TRUE
 );
-
+      
+/*
 CREATE TABLE IF NOT EXISTS administrador (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     nome VARCHAR(75) NOT NULL,
@@ -26,6 +27,7 @@ CREATE TABLE IF NOT EXISTS administrador (
     senha_hash VARCHAR(255) NOT NULL,
     ativo BOOLEAN DEFAULT TRUE
 );
+*/
 
 CREATE TABLE IF NOT EXISTS funcao (
     id SERIAL PRIMARY KEY,
