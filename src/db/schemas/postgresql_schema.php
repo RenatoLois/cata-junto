@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS vinculo (
     id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
     id_pessoa UUID NOT NULL,
     id_funcao INT NOT NULL,
-    id_administrador UUID,
+    id_vinculo_administrador UUID,
     data_solicitacao TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     data_resposta TIMESTAMP NULL,
     status VARCHAR(20) NOT NULL DEFAULT 'pendente',
@@ -65,7 +65,8 @@ CREATE TABLE IF NOT EXISTS ponto_coleta (
     senha_hash VARCHAR(255) NOT NULL,
     telefone VARCHAR(20),
     data_registro TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    ativo BOOLEAN DEFAULT TRUE
+    ativo BOOLEAN DEFAULT TRUE,
+    pontos INT NOT NULL DEFAULT 0
 );
 
 CREATE TABLE IF NOT EXISTS coleta_residencial (
